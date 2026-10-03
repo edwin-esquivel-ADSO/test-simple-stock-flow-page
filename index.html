@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Stock Flow — Control Confiable de Stock y Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">📦</span>
+                <span class="logo-text">Simple Stock Flow</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#pilares">Pilares</a>
+                <a href="#caracteristicas">Características</a>
+                <a href="#arquitectura">Arquitectura</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <span class="badge">Prueba Técnica · ADSO 3413974</span>
+                <h1>Control de Stock y Ventas Impecable para Pequeños Comercios</h1>
+                <p class="subtitle">
+                    Diseñado bajo <strong>Desarrollo Guiado por Especificación (SDD)</strong> y 
+                    <strong>Arquitectura Onion</strong>. Sin sobreventa, sin datos alterables y con reportes inmutables.
+                </p>
+                <div class="cta-group">
+                    <a href="#pilares" class="btn btn-primary">Conocer el Sistema</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pilares" class="section pillars-section">
+            <div class="container">
+                <h2 class="section-title">Las 3 Afirmaciones Innegociables</h2>
+                <div class="grid cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🎯</div>
+                        <h3>1. Stock Real Garantizado</h3>
+                        <p>El stock que muestra el catálogo es exactamente el stock disponible. Las ventas descuentan atómicamente y el stock nunca es negativo.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔒</div>
+                        <h3>2. Ventas Inalterables</h3>
+                        <p>Una venta registrada no se modifica ni se anula jamás. El precio, nombre y categoría se congelan en el instante de la transacción.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📊</div>
+                        <h3>3. Reportes Consistentes</h3>
+                        <p>El reporte de un período cerrado dice hoy exactamente lo mismo que dirá en un año, sin importar los cambios posteriores en el catálogo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="section features-section">
+            <div class="container">
+                <h2 class="section-title">Capacidades del Sistema</h2>
+                <div class="grid features-grid">
+                    <div class="feature-item">
+                        <h4>Mantenimiento de Catálogo</h4>
+                        <p>Gestión completa de productos con imágenes, asignación de categorías fijas y baja lógica para productos con historial.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Cálculo Preciso y Monomoneda</h4>
+                        <p>Operaciones monetarias estrictas en COP con precisión decimal fija (sin errores de redondeo en punto flotante).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Control de Concurrencia Optimista</h4>
+                        <p>Protección contra ventas simultáneas que compitan por las mismas unidades en stock.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Roles y Seguridad</h4>
+                        <p>Separación estricta entre Administrador y Vendedor con autenticación mediante tokens JWT seguros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="arquitectura" class="section architecture-section">
+            <div class="container text-center">
+                <h2 class="section-title">Arquitectura Onion Pura</h2>
+                <p class="section-description">
+                    Separación concéntrica de 4 anillos: Dominio aislado de frameworks, 
+                    Aplicación orquestando casos de uso, e Infraestructura encapsulando Laravel y Eloquent.
+                </p>
+                <div class="arch-box">
+                    <code>Presentación (HTTP) ➔ Aplicación (Casos de Uso) ➔ Dominio (PHP Puro) 🡄 Infraestructura (Eloquent)</code>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Simple Stock Flow · Ficha SENA ADSO 3413974. Proyecto de evaluación técnica.</p>
+        </div>
+    </footer>
+</body>
+</html>
